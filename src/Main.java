@@ -1,13 +1,16 @@
 public class Main {
     public static void main(String[] args) {
+        Boss villain = new Boss(800,60, new Weapon(WeaponType.MAGIC,"Magic Stick"));
+        System.out.println("Boss health: " + villain.getHealth() + ", " + "Boss damage: " + villain.getDamage() + ", " + "Boss Weapon: " + villain.getWeapon().getWeaponType()
+                + ", " + "Boss Weapon Name: " + villain.getWeapon().getWeaponName() + "\n");
 
-        Boss villain = new Boss();
-        villain.setHealth(800);
-        villain.setDamage(60);
-        System.out.println("Boss health: " + villain.getHealth() + ", damage: " + villain.getDamage() + ", weapon: " + villain.getWeapon());
-        System.out.println();
+        villain = new Boss(800, 60, new Weapon(WeaponType.MAGIC,"Magic Stick"));
+        System.out.println(villain.printInfo());
 
-        Weapon w = new Weapon();
-        System.out.println(w.getFire());
+        Skeleton skeleton1 = new Skeleton(150,30, new Weapon(WeaponType.THROWING_WEAPON,"Bow"),100);
+        System.out.println(skeleton1.printInfo());
+
+        Skeleton skeleton2 = new Skeleton(300,60, new Weapon(WeaponType.GUNSHOT,"CrossBow"),140);
+        System.out.println(skeleton2.printInfo());
     }
 }

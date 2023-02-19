@@ -1,23 +1,23 @@
 public class Weapon {
+    private static WeaponType weaponType;
+    private String weaponName;
 
-    private WeaponType fireArms;
-    private String rpk; // рпк
-    private String sword; // меч
-    private String missile; // ракета
-
-    public WeaponType getFire() {
-        return fireArms;
+    public void setWeaponType(WeaponType weaponType) {
+        this.weaponType = weaponType;
+    }
+    public WeaponType getWeaponType() {
+        return weaponType;
     }
 
-    public void setFire(WeaponType fire) {
-        this.fireArms = fire;
+    public void setWeaponName(String weaponName) {
+        this.weaponName = weaponName;
+    }
+    public String getWeaponName() {
+        return weaponName;
     }
 
-    public String getRpk() {
-        return rpk;
-    }
-
-    public void setRpk(String rpk) {
-        this.rpk = rpk;
+    public Weapon(WeaponType weaponType, String weaponName) {
+        this.weaponType = weaponType;
+        this.weaponName = weaponName;
     }
 }
